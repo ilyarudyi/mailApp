@@ -14,8 +14,8 @@ app.listen(PORT, () => console.log(`Server is running at ${PORT}`))
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: `kkonstantinovskyi@gmail.com`,
-    pass: `KostyanKostya123`,
+    user: process.env.secret_user,
+    pass: process.env.secret_password,
   },
 });
 
